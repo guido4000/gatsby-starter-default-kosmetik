@@ -16,7 +16,7 @@ const SecondPage = () => (
         Back to home
       </Link>
 
-      <a class="button is-link">Link</a>
+      {/* <a class="button is-link">Link</a> */}
     </div>
   </Layout>
 );
