@@ -1,3 +1,13 @@
+@charset "utf-8";
+
+// BULMA VARIABLE OVER-RIDES
+$primary: #b084eb;
+$blue: #7dc1ff;
+$input-shadow: none;
+$info: $blue;
+$background: #fafafa;
+@import "~bulma/bulma.sass";
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

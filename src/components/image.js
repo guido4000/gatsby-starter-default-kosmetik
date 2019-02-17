@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -28,5 +28,51 @@ const Image = () => (
     `}
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
-)
-export default Image
+);
+export default Image;
+
+// https://github.com/gatsbyjs/gatsby/tree/master/examples/using-gatsby-image
+// https://medium.com/@kyle.robert.gill/ridiculously-easy-image-optimization-with-gatsby-js-59d48e15db6e
+// https://codebushi.com/using-gatsby-image/
+
+/*
+{ allImageSharp 
+  { edges 
+    { node 
+      {
+        original
+       		{ src width height} 
+        
+        fluid
+        	{ src srcSet sizes}
+        
+        fixed (width: 350)
+        	{ src width}
+        
+        resize (width: 350 ) { originalName src}
+      }
+    }
+  }
+}
+*/
+
+/*
+query {
+  imageOne: file(relativePath: {eq: "astro"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        base64
+        tracedSVG
+        aspectRatio
+        src
+        srcSet
+        srcWebp
+        srcSetWebp
+        sizes
+        originalImg
+        originalName
+      }
+    }
+  }
+}
+*/
